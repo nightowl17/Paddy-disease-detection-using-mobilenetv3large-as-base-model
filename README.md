@@ -12,6 +12,6 @@ for ease of use i suggest you to make sure that the model is in the same directo
 
 ### 3. run the streamlit file
 run the app using either command prompt inside the app folder, or use terminal in your IDE (e.g visual studio code)
-run "streamlit run stapp.py" to run the app
+run "streamlit run stapp.py" to run the app, below is an example when you run the app
 
 ![Sample](sample.jpg)
