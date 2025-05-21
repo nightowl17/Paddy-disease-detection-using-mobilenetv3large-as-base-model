@@ -14,4 +14,7 @@ for ease of use i suggest you to make sure that the model is in the same directo
 run the app using either command prompt inside the app folder, or use terminal in your IDE (e.g visual studio code)
 run "streamlit run stapp.py" to run the app, below is an example when you run the app
 
+NOTE: for testing it's important that you pick images from the test folder in the dataset_split folder because they are not used for training
+
+
 ![Sample](sample.jpg)
