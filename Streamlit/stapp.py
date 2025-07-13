@@ -22,11 +22,10 @@ model_path = Path(__file__).parent / "Mobilenetv3large_paddy_disease_detection_a
 model = load_model(model_path)
 
 
-base_path = Path(__file__).parent
 labels_path = base_path / "labels.txt"
 
 # load class names
-with open('labels.txt', 'r') as f:
+with open(labels_path, 'r') as f:
     class_names = [a[:-1].split(' ')[1] for a in f.readlines()]
 
 # display image
