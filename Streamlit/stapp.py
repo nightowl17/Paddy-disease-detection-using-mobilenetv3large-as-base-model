@@ -2,7 +2,8 @@ import streamlit as st
 from tensorflow.keras.models import load_model
 from PIL import Image
 import numpy as np
-
+from pathlib import Path
+import keras
 from util import classify, set_background
 
 
@@ -16,8 +17,10 @@ st.header('Please upload an image of plant leaves')
 # upload file
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
-# load classifier
-model = load_model('Mobilenetv3large_paddy_disease_detection_architecture_3_fine_tuned.keras')
+
+model_path = Path(__file__).parent / "Mobilenetv3large_paddy_disease_detection_architecture_3_fine_tuned.keras"
+model = load_model(model_path)
+
 
 # load class names
 with open('labels.txt', 'r') as f:
