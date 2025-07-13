@@ -17,8 +17,8 @@ st.header('Please upload an image of plant leaves')
 # upload file
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
-
-model_path = Path(__file__).parent / "Mobilenetv3large_paddy_disease_detection_architecture_3_fine_tuned.keras"
+base_path = Path(__file__).parent
+model_path = base_path / "Mobilenetv3large_paddy_disease_detection_architecture_3_fine_tuned.keras"
 model = load_model(model_path)
 
 
