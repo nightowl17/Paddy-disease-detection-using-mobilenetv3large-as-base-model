@@ -5,7 +5,6 @@ import numpy as np
 
 from util import classify, set_background
 
-set_background('Streamlit/bg.jpg')
 
 
 # set title
@@ -18,10 +17,10 @@ st.header('Please upload an image of plant leaves')
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
 # load classifier
-model = load_model('Streamlit/Mobilenetv3large_paddy_disease_detection_architecture_3_fine_tuned.keras')
+model = load_model('Mobilenetv3large_paddy_disease_detection_architecture_3_fine_tuned.keras')
 
 # load class names
-with open('Streamlit/labels.txt', 'r') as f:
+with open('labels.txt', 'r') as f:
     class_names = [a[:-1].split(' ')[1] for a in f.readlines()]
 
 # display image
